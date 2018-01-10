@@ -33,11 +33,14 @@
 <br>
 3.进程与线程、线程的基本概念、线程的基本状态以及状态之间的关系<br>一个程序至少有一个进程，一个进程至少有一个线程
 <br>线程指在程序执行过程中，能够执行程序代码的一个执行单位，每个程序至少都有一个线程，也就是程序本身。<br>　Java中的线程有四种状态分别是：运行、就绪、挂起、结束。 
-<br>
+
+
 4.java的四种引用？<br>强引用、弱引用、软引用、虚引用（了解，并知道如何使用）
-<br>
+
+
 5.equals与==的区别<br>==是判断两个变量或实例是不是指向同一个内存空间，equals是判断两个变量或实例所指向的内存空间的值是不是相等
-<br>
+
+
 6.java反射机制<br>java反射机制是在运行时，对于任意一个类，都能够知道这个类所有属性和方法；对于任意一个对象，都能够调用它的任意一个方法；这种动态获取的信息以及动态调用对象的方法等功能称为java语言的反射机制。
 <br>java反射机制主要提供了一下功能：
 
@@ -46,31 +49,49 @@
 - c）在运行时判断任意一个类所具有的成员变量和方法；
 - d）在运行时调用任意一个对象的方法，生成动态代理
 
-<br>
+
 7.Maven 和ANT 有什么区别<br>虽然两者都是构建工具，都用于创建java应用，但是Maven做的事情更多，在基于“约定优于配置”的概念下，提供标准的java项目结构，同时能为应用自动管理依赖应用中所依赖的jar文件。
-<br>
+
+
 8.进程间通信方式<br>intent，bind机制（IPC  - > AIDL），Messenger，broadcastReceiver广播
-<br>
+
+
 9.Dalvik虚拟机与JVM有什么区别<br>Dalvik基于寄存器，而JVM基于栈。基于寄存器的虚拟机对于更大的程序来说，在它们编译的时候，花费的时间更短。Dalvik执行.dex格式的字节码，而JVM执行.class格式的字节码
-<br>
+
+
 9.GC是什么? 为什么要有GC? <br>GC是垃圾收集的意思（GabageCollection）,内存处理是编程人员容易出现问题的地方，忘记或者错误的内存回收会导致程序或系统的不稳定甚至崩溃，Java提供的GC功能可以自动监测对象是否超过作用域从而达到自动回收内存的目的，Java语言没有提供释放已分配内存的显示操作方法
-<br>
+
+
 10.String s = new String("xyz");创建了几个String Object? <br>两个,一个是静态区的”xyz”，一个是用new创建在堆上的对象。
-<br>
+
+
 11.给我一个你最常见到的Runtime exception<br>ClassCastException、IllegalArgumentException、IndexOutOfBoundsException、NullPointerException、SecurityException、SystemException
-<br>
+
+
 12.是否可以继承String类?<br>String类是final类故不可以继承
-<br>
+
+
 13.描述一下JVM加载class文件的原理机制?<br>JVM中类的装载是由ClassLoader和它的子类来实现的,Java ClassLoader 是一个重要的Java运行时系统组件。它负责在运行时查找和装入类文件的类
-<br>
+
+
 14.排序都有哪几种方法？<br>插入排序（直接插入排序、希尔排序），交换排序（冒泡排序、快速排序），选择排序（直接选择排序、堆排序），归并排序，分配排序（箱排序、基数排序）
-<br>
+
+
 15.一个“.java”源文件中是否可以包括多个类（不是内部类）？有什么限制？<br>可以。必须只有一个类名与文件名相同。
-<br>
+
+
 16.Math.round(11.5) 等于多少？Math.round(-11.5)等于多少？<br>Math.round(11.5)的返回值是12，Math.round(-11.5)的返回值是-11。四舍五入的原理是在参数上加0.5然后进行下取整。
-<br>
+
+
 17.获得一个类的类对象有哪些方式？
 
 - 方法1：类型.class，例如：String.class
 - 方法2：对象.getClass()，例如：”hello”.getClass()
 - 方法3：Class.forName()，例如：Class.forName(“java.lang.String”)
+
+
+18.float f=3.4;是否正确？<br>不正确。3.4是双精度数，将双精度型（double）赋值给浮点型（float）属于下转型（down-casting，也称为窄化）会造成精度损失，因此需要强制类型转换float f =(float)3.4; 或者写成float f =3.4F
+
+19.try{}里有一个return语句，那么紧跟在这个try后的finally{}里的代码会不会被执行，什么时候被执行，在return前还是后?<br>会执行，在方法返回调用者前执行。
+
+20.List、Set、Map是否继承自Collection接口？<br>List、Set 是，Map 不是。Map是键值对映射容器，与List和Set有明显的区别，而Set存储的零散的元素且不允许有重复元素（数学中的集合也是如此），List是线性结构的容器，适用于按数值索引访问元素的情形。
